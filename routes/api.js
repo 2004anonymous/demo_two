@@ -10,12 +10,14 @@ route.get("/", async (req, res)=>{
 
 route.post("/", async (req, res)=>{
     res.setHeader("Content-Type", "application/json");
-    const userModel = new UserModel(req.body);
+    try{
+        const userModel = new UserModel(req.body);
     const result = await userModel.save();
     res.status(201).json({
         messege:"New record created !",
         data: result
     })
+    }catch(error=> res.send(error));
 });
 
 module.exports = route;
