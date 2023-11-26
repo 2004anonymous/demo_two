@@ -17,7 +17,9 @@ route.post("/", async (req, res)=>{
         messege:"New record created !",
         data: result
     })
-    }catch(error=> res.send(error));
+    }catch(error){
+        res.send(error);
+    }
 });
 
 module.exports = route;
