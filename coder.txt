@@ -1,3 +1,1 @@
-Hello world !
-Rahul Gogoi
-Tulya Rani Pegu
+This is from bug-fix (features)
